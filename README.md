@@ -1,3 +1,3 @@
 # Restaurant-System
 
-<img src="UML.jpg"/>
+<img src="UML.png"/>
