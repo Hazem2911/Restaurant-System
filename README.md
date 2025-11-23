@@ -26,7 +26,7 @@ Demonstrates **SOLID principles** and common **OO design patterns** (Factory, Bu
 ## ┏━ Project Structure ━━━━━━━━━━━━━━━━━━━━━
 
 <p align="center">
-  <img src="UMLstructure.png" />
+  <img src="./UMLstructure.png" />
 </p>
 
 ## ┏━ Design Patterns ━━━━━━━━━━━━━━━━━━━━━
