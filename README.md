@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="UML.png"  width="600"/>
+  <img src="UML.png" />
 </p>
 
 # ┏━ Restaurant Ordering & Billing System ━━━━━━━━━━━━━━
