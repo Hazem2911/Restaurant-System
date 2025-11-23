@@ -1,13 +1,15 @@
-public class Burger extends MenuItem {
-    public string name;
-    public float price;
-    public string bunType;
-    public bool hasCheese;
+package Menu;
 
-    public Burger(string name, float price, string bunType, bool hasCheese) {
-        this.name = name;
-        this.price = price;
+public class Burger extends MenuItem {
+    private final String bunType;
+    private final boolean hasCheese;
+
+    public Burger(String id, String name, float basePrice, String bunType, boolean hasCheese) {
+        super(id, name, basePrice, "Burger");
         this.bunType = bunType;
         this.hasCheese = hasCheese;
     }
+
+    public String getBunType() { return bunType; }
+    public boolean hasCheese() { return hasCheese; }
 }

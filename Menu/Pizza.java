@@ -1,13 +1,15 @@
-public class Pizza extends MenuItem {
-    public string name;
-    public float price;
-    public string size;
-    public bool isVegetarian;
+package Menu;
 
-    public Pizza(string name, float price, string size, bool isVegetarian) {
-        this.name = name;
-        this.price = price;
+public class Pizza extends MenuItem {
+    private final String size;
+    private final boolean vegetarian;
+
+    public Pizza(String id, String name, float basePrice, String size, boolean vegetarian) {
+        super(id, name, basePrice, "Pizza");
         this.size = size;
-        this.isVegetarian = isVegetarian;
+        this.vegetarian = vegetarian;
     }
+
+    public String getSize() { return size; }
+    public boolean isVegetarian() { return vegetarian; }
 }

@@ -1,13 +1,22 @@
-public class Menu {
-    public string menuType;
-    public List<MenuItem> items;
+package Menu;
 
-    public Menu(string menuType, List<MenuItem> items) {
+import java.util.List;
+import java.util.ArrayList;
+
+public class Menu {
+    private final String menuType;
+    private final List<IMenuItem> items;
+
+    public Menu(String menuType, List<? extends IMenuItem> items) {
         this.menuType = menuType;
-        this.items = items;
+        this.items = new ArrayList<>(items);
     }
 
-    public List<MenuItem> getItems() {
+    public String getMenuType() {
+        return menuType;
+    }
+
+    public List<IMenuItem> getItems() {
         return items;
     }
 }

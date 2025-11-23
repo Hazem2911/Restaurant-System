@@ -1,3 +1,8 @@
+package Payments.Strategy;
+
+import Payments.PaymentDetails;
+import Payments.PaymentResult;
+
 public interface IPaymentStrategy {
-    void pay(int amount);
+    PaymentResult process(double amount, PaymentDetails details);
 }

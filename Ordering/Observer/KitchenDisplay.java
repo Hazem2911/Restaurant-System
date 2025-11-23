@@ -1,3 +1,5 @@
+package Ordering.Observer;
+
 public class KitchenDisplay implements IObserver {
     private ISubject subject;
 
@@ -8,6 +10,6 @@ public class KitchenDisplay implements IObserver {
 
     @Override
     public void update() {
-        System.out.println("KitchenDisplay: An update has been received from the subject.");
+        System.out.println("KitchenDisplay: update -> " + subject.getUpdate());
     }
 }

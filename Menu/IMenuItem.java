@@ -1,4 +1,7 @@
+package Menu;
+
 public interface IMenuItem {
-    string getName();
+    String getId();    
+    String getName();
     float getPrice();
 }

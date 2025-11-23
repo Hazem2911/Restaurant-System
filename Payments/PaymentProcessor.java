@@ -1,9 +1,21 @@
+package Payments;
+
+import Payments.Strategy.IPaymentStrategy;
 public class PaymentProcessor {
-    public IPaymentStrategy paymentStrategy;
-    public PaymentProcessor(IPaymentStrategy paymentStrategy) {
-        this.paymentStrategy = paymentStrategy;
+    private IPaymentStrategy strategy;
+
+    public PaymentProcessor(IPaymentStrategy strategy) {
+        this.strategy = strategy;
     }
-    public void processPayment(double amount) {
-        paymentStrategy.pay(amount);
+
+    public void setStrategy(IPaymentStrategy strategy) {
+        this.strategy = strategy;
+    }
+
+    public PaymentResult processPayment(double amount, PaymentDetails details) {
+        if (strategy == null) {
+            return new PaymentResult(false, "No payment strategy configured", null);
+        }
+        return strategy.process(amount, details);
     }
 }

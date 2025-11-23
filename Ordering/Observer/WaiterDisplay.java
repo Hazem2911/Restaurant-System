@@ -1,3 +1,5 @@
+package Ordering.Observer;
+
 public class WaiterDisplay implements IObserver {
     private ISubject subject;
 
@@ -8,7 +10,7 @@ public class WaiterDisplay implements IObserver {
 
     @Override
     public void update() {
-        System.out.println("WaiterDisplay: An update has been received from the subject.");
+        System.out.println("WaiterDisplay: update -> " + subject.getUpdate());
         // Additional display logic can be implemented here
     }
 }

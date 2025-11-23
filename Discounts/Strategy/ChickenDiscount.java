@@ -1,3 +1,5 @@
+package Discounts.Strategy;
+
 public class ChickenDiscount implements IDiscountStrategy {
     private static final float DISCOUNT_RATE = 0.15f; // 15% discount
 

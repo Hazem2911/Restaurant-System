@@ -1,3 +1,5 @@
+package Discounts.Strategy;
+
 public class PizzaDiscount implements IDiscountStrategy {
     private static final float DISCOUNT_RATE = 0.10f; // 10% discount
 

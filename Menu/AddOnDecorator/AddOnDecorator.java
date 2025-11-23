@@ -1,27 +1,36 @@
-public class AddOnDecorator implements IMenuItem , IAddOn {
-    private IMenuItem menuItem;
-    private string addOnName;
-    private float addOnPrice;
+package Menu.AddOnDecorator;
 
-    public AddOnDecorator(IMenuItem menuItem, string addOnName, float addOnPrice) {
+import Menu.IMenuItem;
+public abstract class AddOnDecorator implements IMenuItem, IAddOn {
+    protected final IMenuItem menuItem;
+    protected final String addOnName;
+    protected final float addOnPrice;
+    public AddOnDecorator(IMenuItem menuItem, String addOnName, float addOnPrice) {
         this.menuItem = menuItem;
         this.addOnName = addOnName;
         this.addOnPrice = addOnPrice;
     }
-
-    public string getName() {
-        return menuItem.getName() + " with " + addOnName;
+   @Override
+    public String getName() {
+        return menuItem.getName() + " + " + addOnName;
     }
-
+    @Override
     public float getPrice() {
         return menuItem.getPrice() + addOnPrice;
     }
-
-    public string getCategory() {
-        return menuItem.getCategory();
+    @Override
+    public String getId() {
+        return menuItem.getId();
     }
-
-    public int getID() {
-        return menuItem.getID();
+    @Override
+    public String getAddOnName() {
+        return addOnName;
+    }
+    @Override
+    public float getAddOnPrice() {
+        return addOnPrice;
+    }
+    public IMenuItem getWrappedItem() {
+        return menuItem;
     }
 }

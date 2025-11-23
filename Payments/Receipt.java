@@ -1,3 +1,5 @@
+package Payments;
+
 public class Receipt {
     private String receiptId;
     private double amount;

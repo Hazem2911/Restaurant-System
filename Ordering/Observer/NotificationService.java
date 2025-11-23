@@ -1,4 +1,6 @@
-public class NotificationService  {
+package Ordering.Observer;
+
+public class NotificationService implements IObserver {
     private ISubject subject;
 
     public NotificationService(ISubject subject) {
@@ -8,7 +10,7 @@ public class NotificationService  {
 
     @Override
     public void update() {
-        System.out.println("NotificationService: An update has been received from the subject.");
-        // Additional notification logic can be implemented here
+        System.out.println("NotificationService: update -> " + subject.getUpdate());
+        // Additional notification logic (e.g. push / SMS) can be added here
     }
 }
